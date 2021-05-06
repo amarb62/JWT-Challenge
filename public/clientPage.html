@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Page</title>
+    <style>
+        .submit {
+            text-decoration: none;
+            border-radius: 5em;
+            color: #fff;
+            background: linear-gradient(to right, #9C27B0, #E040FB);
+            border: 0;
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            margin-left: 42%;
+            font-size: 18px;
+            box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+        }
+
+        h1 {
+            font-size: 40px;
+            background-color: maroon;
+            color: white;
+            text-align: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    </style>
+    <script>
+        function redirectUrl() {
+            const client_id = 'robomart';
+            const redirect_url = 'http://localhost:5000/welcome';
+            var url = 'http://localhost:5001/login?client_id=' + client_id + '&redirect_url=' + redirect_url;
+            return url;
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>Client Page</h1>
+    <a class='submit' href='javascript:window.location=redirectUrl();'>Sign in with Google</a>
+</body>
+
+</html>
